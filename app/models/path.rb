@@ -1,6 +1,7 @@
 class Path < ApplicationRecord
   # Associations
   belongs_to :user
+  has_many :hexagons
 
   # Validations
   validates :name, presence: true
