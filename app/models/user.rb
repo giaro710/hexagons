@@ -4,5 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # Associations
+  has_many :paths
+
+  def path_limit?
+    true if paths.count == 1
+  end
 end
