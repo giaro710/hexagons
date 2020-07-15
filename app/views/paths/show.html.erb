@@ -14,6 +14,24 @@
     <p><%= x.id %></p>
   <% end %>
 
-  <%= link_to "modify the path name", edit_path_path(@path)  %>
-<% end %>
+  <%= link_to "Modify the path name", edit_path_path(@path)  %>
+  <hr>
 
+  <div>
+    <%= link_to "Create an hexagon", new_path_hexagon_path(@path, @hexagon)  %>
+  </div>
+
+  <br><br>
+
+  <% @path.hexagons.each do |hexagon| %>
+    <div class="p-3 border">
+      <h3><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h3>
+      <p><%= hexagon.short_description %></p>
+      <p><%= hexagon.date %></p>
+
+
+      <%= link_to "Modify", edit_path_hexagon_path(@path, hexagon) %>
+      <%= link_to "Delete", hexagon_path(hexagon), method: :delete %>
+    </div>
+  <% end %>
+<% end %>

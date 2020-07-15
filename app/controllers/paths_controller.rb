@@ -5,6 +5,7 @@ class PathsController < ApplicationController
 
   def show
     # raise
+    # @hexagon = Hexagon.new
   end
 
   def edit
