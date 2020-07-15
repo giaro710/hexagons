@@ -1,0 +1,19 @@
+<% if @path.nil? %>
+  <p>Mi dispiace, ma questo non sono path tuoi</p>
+<% else %>
+  <h1>Il nome di questo path è "<%= current_user.paths.first.name %>"</h1>
+
+  <p>il suo autore è <%= @user.email %></p>
+
+
+  <p><%= current_user.paths.count %></p>
+  <hr>
+
+  <% current_user.paths.each do |x| %>
+    <p><%= x.name %></p>
+    <p><%= x.id %></p>
+  <% end %>
+
+  <%= link_to "modify the path name", edit_path_path(@path)  %>
+<% end %>
+
