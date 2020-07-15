@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :paths
+  has_many :hexagons, through: :paths
 
   def path_limit?
     true if paths.count == 1

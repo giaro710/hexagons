@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 2020_07_15_165025) do
 
-ActiveRecord::Schema.define(version: 2020_07_15_143628) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "hexagons", force: :cascade do |t|
+    t.string "title"
+    t.string "date"
+    t.text "short_description"
+    t.text "long_content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "path_id"
+    t.index ["path_id"], name: "index_hexagons_on_path_id"
+  end
 
   create_table "paths", force: :cascade do |t|
     t.string "name"
