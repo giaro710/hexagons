@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :paths
   has_many :hexagons, through: :paths
+  has_one_attached :photo
 
   def path_limit?
     true if paths.count == 1
