@@ -1,40 +1,47 @@
 <% if @path.nil? %>
   <p>Mi dispiace, ma questo non sono path tuoi</p>
 <% else %>
-  <h1>Il nome di questo path è "<%= current_user.paths.first.name %>"</h1>
 
-  <p>il suo autore è <%= @user.email %></p>
-
-
-  <p><%= current_user.paths.count %></p>
-  <hr>
-
-  <% current_user.paths.each do |x| %>
-    <p><%= x.name %></p>
-    <p><%= x.id %></p>
-  <% end %>
-
-  <%= link_to "Modify the path name", edit_path_path(@path)  %>
-  <hr>
-
-  <div>
-    <%= link_to "Create an hexagon", new_path_hexagon_path(@path, @hexagon)  %>
+  <div class="flexbox-between">
+    <h1><%= current_user.paths.first.name %></h1>
+    <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 28px;'></i>".html_safe, edit_path_path(@path), class: "ml-3" %>
   </div>
 
-  <br><br>
+  <hr>
 
-  <% @path.hexagons.each do |hexagon| %>
-    <div class="p-3 border">
-      <h3><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h3>
-      <p><%= hexagon.short_description %></p>
-      <p><%= hexagon.date %></p>
+  <div class="d-flex justify-content-end">
+    <%= link_to "<i class='fas fa-plus' style='color: #a0dbc3; font-size: 28px;'></i>".html_safe, new_path_hexagon_path(@path, @hexagon), class: "mr-3" %></p>
+  </div>
 
 
-      <%= link_to "Modify", edit_path_hexagon_path(@path, hexagon) %>
-      <%= link_to "Delete", hexagon_path(hexagon), method: :delete %>
-    </div>
-  <% end %>
+  <div class="hexagons-container mt-3">
+    <% @path.hexagons.each do |hexagon| %>
+      <div class="p-3 hexagon-medium">
+        <div>
+          <h3><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h3>
+          <p class="date"><%= hexagon.date %></p>
+          <p><%= hexagon.short_description %></p>
+        </div>
+        <div>
+          <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, edit_path_hexagon_path(@path, hexagon), class: "" %>
+        </div>
+
+        <div>
+          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), class: "" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+  <br><br><br>
+
+
+  <hr>
+
 <% end %>
 
 <%= cl_image_tag("0en0uixbcm5e68l31xz2k7iknvxt",
       width: 400, height: 300, crop: :fill) %>
+
+
