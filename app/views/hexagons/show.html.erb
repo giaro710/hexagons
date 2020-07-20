@@ -2,4 +2,7 @@
 
 <p><%= @hexagon.date %></p>
 <p><%= @hexagon.short_description %></p>
-<p><%= @hexagon.long_content %></p>
+
+<div>
+  <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, edit_path_hexagon_path(@hexagon.path, @hexagon), class: "" %>
+</div>
