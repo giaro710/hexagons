@@ -3,4 +3,6 @@ class Hexagon < ApplicationRecord
 
   validates :title, presence: true
   validates :title, length: { in: 1..30 }
+
+  has_rich_text :long_content
 end
