@@ -27,7 +27,7 @@
         </div>
 
         <div>
-          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), class: "" %>
+          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
         </div>
       </div>
     <% end %>
