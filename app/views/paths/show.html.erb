@@ -22,12 +22,10 @@
           <p class="date"><%= hexagon.date %></p>
           <p><%= hexagon.short_description %></p>
         </div>
-        <div>
-          <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, edit_path_hexagon_path(@path, hexagon), class: "" %>
-        </div>
+
 
         <div>
-          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), class: "" %>
+          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?"}, class: "" %>
         </div>
       </div>
     <% end %>
