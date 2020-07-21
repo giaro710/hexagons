@@ -1,11 +1,10 @@
 body {
-  background: white;
-  // background: #2a96e4;
+  // background: white;
+  background: $first;
+  background-image: url(app/assets/images/dot-grid.png);
 }
 
 a {
   text-decoration: none !important;
 }
-
-
 

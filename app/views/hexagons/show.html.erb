@@ -1,9 +1,23 @@
-<h1><%= @hexagon.title %></h1>
+<div class="main-container-smaller">
 
-<p><%= @hexagon.date %></p>
-<p><%= @hexagon.short_description %></p>
-<p><%= @hexagon.long_content %></p>
+  <div class="superior-box">
+    <div class="flex-title-box">
+      <h1 class="titolo"><%= @hexagon.title %></h1>
+      <%= link_to "Edit", edit_path_hexagon_path(@hexagon.path, @hexagon), class: "button-full" %>
+    </div>
 
-<div>
-  <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, edit_path_hexagon_path(@hexagon.path, @hexagon), class: "" %>
+    <p class="mb-5 date-title"><%= @hexagon.date %></p>
+    <p class="p-text"><%= @hexagon.short_description %></p>
+  </div>
+
+
+  <div class="long-content-box py-4">
+    <p><%= @hexagon.long_content %></p>
+  </div>
+
+  <div class="mt-5">
+    <%= link_to "Back", path_path(@path), class: "button-empty" %>
+  </div>
+
+
 </div>

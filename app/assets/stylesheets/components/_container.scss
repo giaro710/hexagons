@@ -43,6 +43,23 @@
   margin-bottom: 32px;
   border-bottom: 5px solid black;
 
+  h1 {
+    font-size: 56px;
+  }
+}
+
+.flex-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // padding: 24px 24px 24px 24px;
+  margin-bottom: 16px;
+  // border-bottom: 5px solid black;
+
+  h1 {
+    font-size: 56px;
+  }
 }
 
 .profile-flex {
@@ -83,8 +100,18 @@
   /*border: 3px solid blue;*/
 }
 
+.field-box {
+  border-radius: 4px;
+  background: red;
+}
+
 .editor-box {
+  height: 300px;
+  border-radius: 4px;
   background: white;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .centered {
@@ -99,6 +126,16 @@
 .profile-header {
   width: 193px;
   border-bottom: 6px solid grey;
+}
+
+.superior-box {
+  border-bottom: 5px solid black;
+}
+
+.long-content-box {
+  text-align: justify;
+  font-size: 20px;
+  border-bottom: 5px solid black;
 }
 
 // *** Old Style che probabilmente non uso *******************************************************

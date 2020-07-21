@@ -25,8 +25,9 @@ class HexagonsController < ApplicationController
   end
 
   def update
+    @hexagon.path = @path
     if @hexagon.update(hexagon_params)
-      redirect_to path_path(@path)
+      redirect_to path_hexagon_path(@path, @hexagon)
     else
       reder :edit
     end
