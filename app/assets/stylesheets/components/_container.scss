@@ -1,3 +1,89 @@
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  height: 500px;
+  max-height: 500px;
+
+  border: 5px solid grey;
+  border-radius: 16px;
+  background: white;
+  padding: 20px;
+}
+
+// Small SVG
+
+.svg-box-4 {
+  width: 164px;
+  height: 184px;
+  margin: 20px 50px 20px 50px;
+  /*border: 3px solid blue;*/
+}
+
+// Big SVG
+
+.svg-box-5 {
+  width: 328px;
+  height: 368px;
+  margin: 0 50px;
+  /*border: 3px solid blue;*/
+}
+
+.shape {
+  stroke-width: 6px;
+  fill: white;
+  transition: 0.5s;
+  stroke: #D7BCC8;
+
+  /*stroke: #D7BCC8;
+  stroke-width: 6px;
+  fill: #FAC8CD;
+  transition: 0.5s;*/
+  /*fill:#4af2a1;*/
+
+}
+
+.shape:hover {
+  stroke: orange;
+  stroke-width: 6px;
+  fill: #FCC088;
+}
+
+// foreignObject
+
+
+foreignObject {
+  x: 19;
+  y: 88;
+  width: 290px;
+  height: 182px;
+  /*border: 2px solid green;*/
+}
+
+.text-content {
+  width: 282px;
+  height: 174px;
+
+  text-align: center;
+
+  border: 2px solid #495D63;
+
+}
+
+.h-title {
+  font-size: 30px;
+}
+
+.h-paragraph {
+  font-size: 16px;
+  color: grey;
+}
+
+
+
+// *** Old Style che probabilmente non uso *******************************************************
+
 .main_container_bigger {
   width: 1200px;
   margin: 50px auto;
