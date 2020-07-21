@@ -3,18 +3,52 @@
   justify-content: space-around;
   flex-wrap: wrap;
 
-  height: 500px;
-  max-height: 500px;
+  height: 800px;
+  max-height: 800px;
 
-  border: 5px solid grey;
+  border: 2px solid grey;
   border-radius: 16px;
   background: white;
   padding: 20px;
+
+  white-space: nowrap;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 24px 24px 24px;
+  margin-bottom: 32px;
+  border-bottom: 5px solid black;
+
+}
+
+.h-inside-small {
+  width: 132px;
+  height: 88px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  /*border: 2px solid brown;*/
+}
+
 
 // Small SVG
 
-.svg-box-4 {
+.svg-box-small {
   width: 164px;
   height: 184px;
   margin: 20px 50px 20px 50px;
@@ -23,61 +57,15 @@
 
 // Big SVG
 
-.svg-box-5 {
+.svg-box-big {
   width: 328px;
   height: 368px;
   margin: 0 50px;
   /*border: 3px solid blue;*/
 }
 
-.shape {
-  stroke-width: 6px;
-  fill: white;
-  transition: 0.5s;
-  stroke: #D7BCC8;
-
-  /*stroke: #D7BCC8;
-  stroke-width: 6px;
-  fill: #FAC8CD;
-  transition: 0.5s;*/
-  /*fill:#4af2a1;*/
-
-}
-
-.shape:hover {
-  stroke: orange;
-  stroke-width: 6px;
-  fill: #FCC088;
-}
-
-// foreignObject
-
-
-foreignObject {
-  x: 19;
-  y: 88;
-  width: 290px;
-  height: 182px;
-  /*border: 2px solid green;*/
-}
-
-.text-content {
-  width: 282px;
-  height: 174px;
-
-  text-align: center;
-
-  border: 2px solid #495D63;
-
-}
-
-.h-title {
-  font-size: 30px;
-}
-
-.h-paragraph {
-  font-size: 16px;
-  color: grey;
+.editor-box {
+  background: white;
 }
 
 
@@ -85,7 +73,7 @@ foreignObject {
 // *** Old Style che probabilmente non uso *******************************************************
 
 .main_container_bigger {
-  width: 1200px;
+  width: 1582px;
   margin: 50px auto;
 }
 

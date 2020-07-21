@@ -1,0 +1,11 @@
+.green-b {
+  background:  #a0dbc3;
+  padding: 8px 24px;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  &:hover {
+    color: brown;
+  }
+}

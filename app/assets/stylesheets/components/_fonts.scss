@@ -3,3 +3,18 @@
   font-size: 13px;
   font-weight: lighter;
 }
+
+.h-title {
+  font-size: 30px;
+  color: black;
+
+  &:hover {
+    color: #345d5d;
+  }
+}
+
+.h-paragraph {
+  font-size: 16px;
+  color: grey;
+
+}
