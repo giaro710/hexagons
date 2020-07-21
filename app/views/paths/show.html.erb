@@ -2,44 +2,59 @@
   <p>Mi dispiace, ma questo non sono path tuoi</p>
 <% else %>
 
-  <div class="flexbox-between">
+  <div class="flex-title">
     <h1><%= current_user.paths.first.name %></h1>
-    <%= link_to "<i class='far fa-edit' style='color: #a0dbc3; font-size: 28px;'></i>".html_safe, edit_path_path(@path), class: "ml-3" %>
+    <%= link_to "Edit", edit_path_path(@path), class: "button-full" %>
   </div>
 
-  <hr>
-
-  <div class="d-flex justify-content-end">
-    <%= link_to "<i class='fas fa-plus' style='color: #a0dbc3; font-size: 28px;'></i>".html_safe, new_path_hexagon_path(@path, @hexagon), class: "mr-3" %></p>
+  <div class="d-flex justify-content-end mb-4">
+    <%= link_to "<i class='fas fa-plus' style='color: #729EA1; font-size: 28px;'></i>".html_safe, new_path_hexagon_path(@path, @hexagon), class: "mr-3" %></p>
   </div>
 
+  <!-- Contenitore di SMALL -->
 
-  <div class="hexagons-container mt-3">
+  <div class="flex">
     <% @path.hexagons.each do |hexagon| %>
-      <div class="p-3 hexagon-medium">
-        <div>
-          <h3><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h3>
-          <p class="date"><%= hexagon.date %></p>
-          <p><%= hexagon.short_description %></p>
-        </div>
-
-
-        <div>
-          <%= link_to "<i class='fas fa-trash' style='color: #a0dbc3; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
-        </div>
-      </div>
+      <svg class="svg-box-small">
+        <polygon class="shape" points="80,4 160,40 160,140, 80,180, 4,140 4,40" stroke-linejoin="round"/>
+        <foreignObject class="foreign-small">
+          <div class="h-inside-small">
+            <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: white; font-size: 32px;'></i>".html_safe, path_hexagon_path(@path, hexagon) %>
+          </div>
+        </foreignObject>
+      </svg>
     <% end %>
-
   </div>
-
-  <br><br><br>
 
 
   <hr>
+
+  <!-- Contenitore di BIG -->
+
+  <div class="flex">
+    <% @path.hexagons.each do |hexagon| %>
+      <svg class="svg-box-big">
+        <polygon class="shape" points="160,8 320,80 320,280 160,360 8,280 8,80" stroke-linejoin="round"/>
+
+        <foreignObject class="foreign-big">
+          <div class="text-content vertical-flex">
+            <h2 class="h-title"><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h2>
+            <p class="h-paragraph my-3"><%= hexagon.date %></p>
+            <div class="icon-in-big mt-2 mb-2">
+              <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: #729EA1; font-size: 40px;'></i>".html_safe, path_hexagon_path(@path, hexagon) %>
+            </div>
+            <div class="icon-in-big ">
+              <%= link_to "<i class='fas fa-trash' style='color: #729EA1; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+            </div>
+
+          </div>
+        </foreignObject>
+      </svg>
+    <% end %>
+  </div>
 
 <% end %>
 
-<%= cl_image_tag("0en0uixbcm5e68l31xz2k7iknvxt",
-      width: 400, height: 300, crop: :fill) %>
+
 
 

@@ -1,20 +1,41 @@
-<h1>Il mio profilo</h1>
+<div class="main-container-smaller">
+  <div class="profile-header">
+    <h1>Profile info</h1>
+  </div>
 
-<% if @user.photo.attached? %>
-  <%= cl_image_tag(@user.photo.key,
-        width: 400, height: 300, crop: :fill) %>
-<% else %>
-  <p>ciao</p>
-<% end %>
-
-<h4>First Name</h4>
-<p><%= @user.first_name %></p>
-<h4>Age:</h4>
-<p><%= @user.age %></p>
-<h4>Email</h4>
-<p><%= @user.email %></p>
-<h4>Password</h4>
-<p><%= @user.password %></p>
+  <div class="profile-flex mt-5">
+    <div class="profile left border-right centered">
+      <% if @user.photo.attached? %>
+        <div class="">
+          <%= cl_image_tag(@user.photo.key,
+                width: 320, height: 320, crop: :fill, radius: :max, background: "white") %>
+        </div>
+      <% else %>
+        <div class="img-big" style="background:red">
+          <p>No photo yet</p>
+        </div>
+      <% end %>
+    </div>
 
 
-<%= link_to "Edit", edit_user_registration_path, class: "btn btn-primary"  %>
+
+    <div class="profile right border-left centered">
+      <h4>First Name</h4>
+      <p><%= @user.first_name %></p>
+      <h4>Age:</h4>
+      <p><%= @user.age %></p>
+      <h4>Email</h4>
+      <p><%= @user.email %></p>
+      <h4>Password</h4>
+      <p><%= @user.password %></p>
+
+
+      <%= link_to "Edit", edit_user_registration_path, class: "btn btn-primary"  %>
+
+    </div>
+
+  </div>
+
+
+</div>
+

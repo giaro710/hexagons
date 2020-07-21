@@ -1,6 +1,15 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<%= link_to "Go to my path", path_path(current_user.paths.first), class: "btn btn-primary" %>
-
+<% if @user.nil? %>
+  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+  <p class="my-3">or</p>
+  <%= link_to "Login", new_user_session_path, class: "btn btn-primary" %>
+<% else %>
+  <% if @user.paths.count == 0 %>
+      <%= link_to "Create a path", new_path_path %>
+    <% else %>
+      <%= link_to "Go to my path", path_path(current_user.paths.first), class: "btn btn-primary" %>
+    <% end %>
+<% end %>
 
