@@ -39,7 +39,7 @@
         <foreignObject class="foreign-big">
           <div class="text-content vertical-flex">
             <h2 class="h-title"><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h2>
-            <p class="h-paragraph my-3">hexagon.date</p>
+            <p class="h-paragraph my-3"><%= hexagon.date %></p>
             <div class="icon-in-big mt-2 mb-2">
               <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: #a0dbc3; font-size: 40px;'></i>".html_safe, path_hexagon_path(@path, hexagon) %>
             </div>

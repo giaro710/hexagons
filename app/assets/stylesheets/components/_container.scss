@@ -1,3 +1,13 @@
+.main_container_bigger {
+  width: 1582px;
+  margin: 50px auto;
+}
+
+.main-container-smaller {
+  width: 900px;
+  margin: 0 auto;
+}
+
 .flex {
   display: flex;
   justify-content: space-around;
@@ -35,6 +45,15 @@
 
 }
 
+.profile-flex {
+  display: flex;
+  justify-content: space-between;
+  height: 464px;
+
+  // border: solid 5px black
+
+}
+
 .h-inside-small {
   width: 132px;
   height: 88px;
@@ -68,19 +87,22 @@
   background: white;
 }
 
+.centered {
+  text-align: center;
+}
 
+.profile {
+  width: 50%;
+  padding: 60px;
+}
+
+.profile-header {
+  width: 193px;
+  border-bottom: 6px solid grey;
+}
 
 // *** Old Style che probabilmente non uso *******************************************************
 
-.main_container_bigger {
-  width: 1582px;
-  margin: 50px auto;
-}
-
-.main_container_smaller {
-  width: 800px;
-  margin: 0 auto;
-}
 
 .flexbox-start {
   display: flex;
