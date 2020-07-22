@@ -1,15 +1,16 @@
-<div class="container">
-  <h2>Change your path name</h2>
+<div class="main-container-smaller centered">
 
-  <%= simple_form_for(@path) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :name %>
-    </div>
+  <div class="form-small-box">
+    <h2 class="mb-4">Change the path name</h2>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Change", class: "button-full my-3" %>
-    </div>
-  <% end %>
+    <%= simple_form_for(@path) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name %>
+      </div>
 
-  <%= link_to "Back", path_path(@path), class: "button-empty"  %>
+      <div class="form-actions">
+        <%= f.button :submit, "Create", class: "button-full my-3" %>
+      </div>
+    <% end %>
+  </div>
 </div>

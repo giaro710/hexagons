@@ -1,0 +1,53 @@
+<div class="main-container-smaller">
+
+  <div class="flex-title">
+    <h1>My Paths</h1>
+    <%= link_to "Add", new_path_path(@path), class: "button-full" %>
+  </div>
+
+  <% if @user.paths.count == 0 %>
+
+
+    <div class="no-path centered mt-5">
+      <p class="no-path-paragraph">You don't have any path yet</p>
+      <%= link_to "Create a path", new_path_path %>
+    </div>
+
+
+  <% else %>
+
+    <div class="paths-flex mt-5">
+
+      <% @paths.each do |path| %>
+        <div class="path-card">
+
+          <div class="card-title profile centered">
+            <h2><%= link_to path.name, path_path(path) %></p>
+            <%= link_to "<i class='fas fa-trash' style='color: #729EA1; font-size: 16px;'></i>".html_safe, path_path(path), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+          </div>
+
+          <div class="card-hexagon profile centered">
+            <svg class="svg-box-small">
+              <polygon class="shape" points="80,4 160,40 160,140, 80,180, 4,140 4,40" stroke-linejoin="round"/>
+              <foreignObject class="foreign-small">
+                <div class="h-inside-small">
+                  <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: white; font-size: 32px;'></i>".html_safe, path_path(path) %>
+                </div>
+              </foreignObject>
+            </svg>
+          </div>
+
+
+        </div>
+      <% end %>
+
+    </div>
+
+
+
+
+  <% end %>
+</div>
+
+
+

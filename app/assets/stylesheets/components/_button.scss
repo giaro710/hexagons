@@ -2,11 +2,13 @@
   background: $secondary;
   padding: 8px 24px;
   color: white;
-  border-radius: 4px;
+  // border-radius: 4px;
   font-size: 18px;
   font-weight: bold;
+  border: 3px solid $secondary;
   &:hover {
     background: $secondary-lighter;
+    border: 3px solid $secondary-lighter;
     color: white;
   }
 }
@@ -15,14 +17,18 @@
   background: $first;
   padding: 8px 24px;
   color: $secondary;
-  border-radius: 4px;
+  // border-radius: 4px;
   font-size: 18px;
   font-weight: bold;
-  border: 2px solid $secondary;
+  border: 3px solid $secondary;
   &:hover {
     background: white;
     color: $secondary-lighter;
-    border: 2px solid $secondary-lighter;
+    border: 3px solid $secondary-lighter;
   }
+}
+
+.margin-down {
+  margin-bottom: 50px;
 }
 
