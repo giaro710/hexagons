@@ -1,0 +1,64 @@
+.date {
+  color: rgba(0,0,0,0.5);
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.h-title {
+  font-size: 30px;
+  a {
+    color: $dark-grey;
+    transition: 0.5;
+
+    &:hover {
+      color: $dark-grey-lighter;
+    }
+
+  }
+
+}
+
+.h-paragraph {
+  font-size: 13px;
+  color: grey;
+
+}
+
+.date-title {
+  color: rgba(0,0,0,0.7);
+  font-size: 18px;
+}
+
+.p-text {
+  font-size: 20px;
+}
+
+.icon-in-big {
+  i {
+    color: white;
+    &:hover {
+      color: red;
+    }
+  }
+
+}
+
+// Landing page
+
+.landing-title {
+  font-size: 64px;
+}
+
+.landing-paragraph {
+  font-size: 24px;
+  font-weight: lighter;
+}
+
+.motto {
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+}
+
+.no-path-paragraph {
+  font-size: 56px;
+}

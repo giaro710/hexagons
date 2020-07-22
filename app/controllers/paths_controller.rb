@@ -1,7 +1,11 @@
 class PathsController < ApplicationController
 
-  before_action :set_user, only: [:show, :new, :create, :edit, :update]
-  before_action :find_path
+  before_action :set_user, only: [:index, :show, :new, :create, :edit, :update]
+  before_action :find_path, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @paths = @user.paths.all
+  end
 
   def show
     # raise
@@ -15,6 +19,7 @@ class PathsController < ApplicationController
 
   def create
     @path = Path.new(path_params)
+    @path.user = @user
     if @path.save
       redirect_to path_path(@path)
     else
@@ -31,6 +36,12 @@ class PathsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @path.destroy
+
+    redirect_to paths_path
   end
 
   private
