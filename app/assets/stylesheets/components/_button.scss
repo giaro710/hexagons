@@ -4,7 +4,7 @@
   color: white;
   // border-radius: 4px;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   border: 3px solid $secondary;
   &:hover {
     background: $secondary-lighter;
@@ -18,13 +18,14 @@
   padding: 8px 24px;
   color: $secondary;
   // border-radius: 4px;
+  text-shadow: 1px 1px rgba(0,0,0,0.2);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: normal;
   border: 3px solid $secondary;
   &:hover {
-    background: white;
-    color: $secondary-lighter;
-    border: 3px solid $secondary-lighter;
+    // background: white;
+    color: white;
+    border: 3px solid white;
   }
 }
 

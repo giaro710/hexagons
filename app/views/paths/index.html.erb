@@ -1,7 +1,7 @@
 <div class="main-container-smaller">
 
   <div class="flex-title">
-    <h1>My Paths</h1>
+    <h1 class="title-shadow">My Paths</h1>
     <%= link_to "Add", new_path_path(@path), class: "button-full" %>
   </div>
 
@@ -21,9 +21,9 @@
       <% @paths.each do |path| %>
         <div class="path-card">
 
-          <div class="card-title profile centered">
-            <h2><%= link_to path.name, path_path(path) %></p>
-            <%= link_to "<i class='fas fa-trash' style='color: #729EA1; font-size: 16px;'></i>".html_safe, path_path(path), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+          <div class="profile centered vertical-flex">
+            <h2 class="card-header" ><%= link_to path.name, path_path(path) %></h2>
+            <%= link_to "<i class='fas fa-trash' style='color: #40b3a2; font-size: 16px;'></i>".html_safe, path_path(path), method: :delete, data: { confirm: "Are you sure?" }, class: "index-trash" %>
           </div>
 
           <div class="card-hexagon profile centered">

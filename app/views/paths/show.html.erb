@@ -3,12 +3,12 @@
 <% else %>
 
   <div class="flex-title">
-    <h1><%= @path.name %></h1>
+    <h1 class="title-shadow"><%= @path.name %></h1>
     <%= link_to "Edit", edit_path_path(@path), class: "button-full" %>
   </div>
 
   <div class="d-flex justify-content-end mb-4">
-    <%= link_to "<i class='fas fa-plus' style='color: #729EA1; font-size: 40px;'></i>".html_safe, new_path_hexagon_path(@path, @hexagon), class: "mr-3" %></p>
+    <%= link_to "<i class='fas fa-plus' style='color: #729EA1; font-size: 40px;z-index: 1000;'></i>".html_safe, new_path_hexagon_path(@path, @hexagon), class: "mr-3" %></p>
   </div>
 
   <!-- Contenitore di BIG -->
@@ -21,12 +21,12 @@
         <foreignObject class="foreign-big">
           <div class="text-content vertical-flex">
             <h2 class="h-title"><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h2>
-            <p class="h-paragraph mb-3 mt-2"><%= hexagon.date %></p>
+            <p class="date text-shadow-light mb-3 mt-2"><%= hexagon.date %></p>
             <div class="icon-in-big mt-3 mb-3">
               <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: white; font-size: 40px;'></i>".html_safe, path_hexagon_path(@path, hexagon) %>
             </div>
             <div class="icon-in-big ">
-              <%= link_to "<i class='fas fa-trash' style='color: #d0ccbd; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "" %>
+              <%= link_to "<i class='fas fa-trash' style='color: #40b3a2; font-size: 16px;'></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "text-shadow-light" %>
             </div>
 
           </div>
