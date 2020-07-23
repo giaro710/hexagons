@@ -43,6 +43,25 @@
 
 }
 
+// paths/index
+
+.card-header {
+  background: white;
+  border: none;
+  a {
+    color: $dark-grey;
+    transition: 0,5s;
+    &:hover {
+      color: $dark-grey-lighter;
+      border-bottom: 2px solid $dark-grey-lighter;
+    }
+  }
+}
+
+.index-trash {
+  margin-top: 40px;
+}
+
 // Landing page
 
 .landing-title {
