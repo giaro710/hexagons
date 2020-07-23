@@ -165,15 +165,16 @@
 .long-content-box {
   text-align: justify;
 
-  padding: 20px;
-  margin-top: 10px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   border-radius: 2px;
 
   font-size: 20px;
   font-weigth: 500;
 
-  border-bottom: 5px solid $secondary;
+  // border-bottom: 5px solid $secondary;
 
   background: #f4fcfb;
   // background-image: linear-gradient(#f4fcfb, white, #f4fcfb)
@@ -214,6 +215,10 @@
 
 .first-personal-info {
   margin-top: 0;
+}
+
+.top-bor {
+  border-top: 5px solid $secondary;
 }
 
 // *** Old Style che probabilmente non uso *******************************************************
