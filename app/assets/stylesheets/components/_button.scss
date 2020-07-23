@@ -1,14 +1,14 @@
 .button-full {
-  background: $secondary;
+  background: $button;
   padding: 8px 24px;
   color: white;
   // border-radius: 4px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
-  border: 3px solid $secondary;
+  border: 3px solid $button;
   &:hover {
-    background: $secondary-lighter;
-    border: 3px solid $secondary-lighter;
+    background: $button-light;
+    border: 3px solid $button-light;
     color: white;
   }
 }
@@ -16,16 +16,16 @@
 .button-empty {
   background: $first;
   padding: 8px 24px;
-  color: $secondary;
+  color: $button;
   // border-radius: 4px;
-  text-shadow: 1px 1px rgba(0,0,0,0.2);
-  font-size: 18px;
+  // text-shadow: 1px 1px rgba(0,0,0,0.2);
+  font-size: 20px;
   font-weight: normal;
-  border: 3px solid $secondary;
+  border: 3px solid $button;
   &:hover {
     // background: white;
     color: white;
-    border: 3px solid white;
+    border: 3px solid $button-light;
   }
 }
 

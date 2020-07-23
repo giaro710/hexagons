@@ -1,4 +1,39 @@
-.icon-small {
-  font-size: 65px;
-  color: red;
+.plus-icon {
+  font-size: 45px;
+  color: $first-dark;
+  transition: 0.2s;
+
+  &:hover {
+    font-size: 55px;
+    color: white;
+    text-shadow: 3px 3px rgba(0,0,0,0.2);
+  }
+
 }
+
+
+.arrow-icon {
+  font-size: 40px;
+  color: white;
+  transition: 0.2s;
+
+  &:hover {
+    font-size: 55px;
+    color: white;
+    text-shadow: 3px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.trash-icon {
+  color: $secondary-lighter;
+  font-size: 16px;
+  transition: 0.2s;
+
+  &:hover {
+    font-size: 20px;
+    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    color: white;
+  }
+}
+
+
