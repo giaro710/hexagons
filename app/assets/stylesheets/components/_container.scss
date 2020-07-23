@@ -1,4 +1,4 @@
-.main_container_bigger {
+.main-container-bigger {
   width: 1582px;
   margin: 50px auto;
 }
@@ -164,8 +164,19 @@
 
 .long-content-box {
   text-align: justify;
+
+  padding: 20px;
+  margin-top: 10px;
+
+  border-radius: 2px;
+
   font-size: 20px;
+  font-weigth: 500;
+
   border-bottom: 5px solid $secondary;
+
+  background: #f4fcfb;
+  // background-image: linear-gradient(#f4fcfb, white, #f4fcfb)
 }
 
 .landing-headers {
@@ -195,6 +206,14 @@
   margin: 0 auto;
 
   // border: solid 2px red;
+}
+
+.personal-info {
+  margin: 32px 0;
+}
+
+.first-personal-info {
+  margin-top: 0;
 }
 
 // *** Old Style che probabilmente non uso *******************************************************
