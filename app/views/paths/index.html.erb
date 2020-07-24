@@ -23,7 +23,7 @@
 
           <div class="profile centered vertical-flex">
             <h2 class="card-header" ><%= link_to path.name, path_path(path) %></h2>
-            <%= link_to "<i class='fas fa-trash' style='color: #40b3a2; font-size: 16px;'></i>".html_safe, path_path(path), method: :delete, data: { confirm: "Are you sure?" }, class: "index-trash" %>
+            <%= link_to "<i class='fas fa-trash'></i>".html_safe, path_path(path), method: :delete, data: { confirm: "Are you sure?" }, class: "index-trash" %>
           </div>
 
           <div class="card-hexagon profile centered">
@@ -31,7 +31,7 @@
               <polygon class="shape" points="80,4 160,40 160,140, 80,180, 4,140 4,40" stroke-linejoin="round"/>
               <foreignObject class="foreign-small">
                 <div class="h-inside-small">
-                  <%= link_to "<i class='far fa-arrow-alt-circle-right' style='color: white; font-size: 32px;'></i>".html_safe, path_path(path) %>
+                  <%= link_to "<i class='far fa-arrow-alt-circle-right'></i>".html_safe, path_path(path), class: "arrow-icon-small" %>
                 </div>
               </foreignObject>
             </svg>

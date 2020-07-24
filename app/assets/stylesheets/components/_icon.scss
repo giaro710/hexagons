@@ -12,15 +12,27 @@
 }
 
 
-.arrow-icon {
+.arrow-icon-big {
   font-size: 40px;
   color: white;
   transition: 0.2s;
 
   &:hover {
-    font-size: 55px;
+    font-size: 42px;
     color: white;
-    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
+  }
+}
+
+.arrow-icon-small {
+  font-size: 32px;
+  color: white;
+  transition: 0.2s;
+
+  &:hover {
+    font-size: 34px;
+    color: white;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
   }
 }
 
@@ -30,9 +42,22 @@
   transition: 0.2s;
 
   &:hover {
-    font-size: 20px;
-    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    font-size: 18px;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
     color: white;
+  }
+}
+
+.index-trash {
+  margin-top: 40px;
+  color: #40b3a2;
+  font-size: 16px;
+  transition: 0.2s;
+
+  &:hover {
+    color: #4FDFCA;
+    // font-size: 18px;
+    text-shadow: 2px 2px rgba(0,0,0,0.2);
   }
 }
 

@@ -8,13 +8,13 @@
   <div class="profile-flex mt-5">
     <div class="profile left border-right centered">
       <% if @user.photo.attached? %>
-        <div class="">
+        <div>
           <%= cl_image_tag(@user.photo.key,
                 width: 320, height: 320, crop: :fill, radius: :max, background: "white") %>
         </div>
       <% else %>
-        <div class="img-big" style="background:red">
-          <p>No photo yet</p>
+        <div>
+          <%= cl_image_tag "no-user-image-square_xfjjjx", width: 320, height: 320, crop: :fill, radius: :max, background: "#7dc2af" %>
         </div>
       <% end %>
     </div>

@@ -23,7 +23,7 @@
             <h2 class="h-title"><%= link_to hexagon.title, path_hexagon_path(@path, hexagon) %></h2>
             <p class="date text-shadow-light mb-2 mt-2"><%= hexagon.date %></p>
             <div class="mt-1 mb-2">
-              <%= link_to "<i class='far fa-arrow-alt-circle-right' style=''></i>".html_safe, path_hexagon_path(@path, hexagon), class: "text-shadow-light arrow-icon" %>
+              <%= link_to "<i class='far fa-arrow-alt-circle-right' style=''></i>".html_safe, path_hexagon_path(@path, hexagon), class: "text-shadow-light arrow-icon-big" %>
             </div>
             <div class="">
               <%= link_to "<i class='fas fa-trash' style=''></i>".html_safe, hexagon_path(hexagon), method: :delete, data: { confirm: "Are you sure?" }, class: "text-shadow-light trash-icon" %>
