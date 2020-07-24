@@ -1,7 +1,16 @@
 .form-control {
   border-radius: 4px;
   background: white;
+  font-size: 18px;
+}
+
+label {
   font-size: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+trix-toolbar {
+  margin: 20px 0;
 }
 
 trix-toolbar .trix-button-group button {
