@@ -11,21 +11,13 @@
 // Lora
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
-// Noto Serif JP
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700;900&display=swap');
 
 // Fran Ruhl Libre
 @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
 
-//Ewert
-@import url('https://fonts.googleapis.com/css2?family=Ewert&display=swap');
-
-//Sofia
-@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
-
 // Define fonts for body and headers
 
-$body-font:  "Fran Ruhl Libre", "Raleway";
+$body-font:  "Raleway", "Fran Ruhl Libre";
 $headers-font: "Playfair Display";
 
 // To use a font file (.woff) uncomment following lines
