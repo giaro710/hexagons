@@ -1,6 +1,6 @@
 body {
   // background: white;
-  background: $first;
+  background: #fff;
   // background-image: url(dot-grid.png);
 }
 
@@ -8,6 +8,8 @@ a {
   text-decoration: none !important;
 }
 
-h1,h2, h3 {
+h1,
+h2,
+h3 {
   color: $dark-grey;
 }
